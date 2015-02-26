@@ -21,6 +21,15 @@ $ composer require funivan/viewable
 
 ``` php
 
+class Email {
+ use \Funivan\Viewable\Viewable;
+ 
+ public function getBody(){
+  return $this->renderView('simple', array('name'=>'funivan'));
+ }
+ 
+}
+
 ```
 
 ## Testing
